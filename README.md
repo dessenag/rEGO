@@ -16,10 +16,10 @@ The rEGO workflow is a novelty and the code is built over two existing platforms
 - Single_objective_EGO_algorithms, Qi Zhang - https://github.com/109902249/Single_objective_EGO_algorithms
 
 ## Table of Contents
-- [rEGO.m](rEGO/rEGO.m): main file of the rEGO algorithm
-- [Tutorial](rEGO\Tutorial): MATLAB tutorials in .m, .mlx, and pdf format for rEGO on two test functions
-- [Utilities](rEGO\Utilities): forks, test functions, and other misc functions.
-- [LANL_3SS](rEGO\LANL_3SS): a numerical model of the Three Storey Structure from the Engineering Institute at LANL (https://doi.org/10.2172/961604)
+- [rEGO.m](rEGO/blob/main/rEGO.m): main file of the rEGO algorithm
+- [Tutorial](rEGO/tree/main/Tutorial): MATLAB tutorials in .m, .mlx, and pdf format for rEGO on two test functions
+- [Utilities](rEGO/tree/main/Utilities): forks, test functions, and other misc functions.
+- [LANL_3SS](rEGO/tree/main/LANL_3SS): a numerical model of the Three Storey Structure from the Engineering Institute at LANL (https://doi.org/10.2172/961604)
 
 ## Repository Citation
 
