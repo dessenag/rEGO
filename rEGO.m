@@ -21,7 +21,23 @@ function [x,fval,results] = rEGO(fun_name,num_vari,lwb,upb,eps1,eps2,printing)
 %     Returns:
 %     x:       position, in terms of variables, of the minimum;
 %     fval:    value of the minimum;
-%     results: .
+%     results: initial: set of points from the design of experiment
+%              samples: values of the function from DoE
+%              min_x: values of the variables for the minimum objective at
+%              each iteration
+%              min_y: minimum value of the function at each iteration
+%              x: last set of variables in the data pool
+%              y: last set of function values in the data pool
+%              evaluation: number of function evaluations to convergence
+%              fval: value of the minimum;
+%              iteration: number of iterations to convergence
+%              EI: expected improvement at convergence
+%              diff: cartesian distance between subsequent minima at
+%              convergence
+%              flag: if 1, iteration stopped because 100*number of variables
+%              without improvement
+%              refinement: number of search space refinements
+%              stall: number of iteration without an improvement
 
 %% Disclaimer
 % This program is free software: you can redistribute it and/or modify  it
@@ -43,31 +59,31 @@ function [x,fval,results] = rEGO(fun_name,num_vari,lwb,upb,eps1,eps2,printing)
 % Gabriele Dessena
 % gdessena@ing.uc3m.es
 % Universidad Carlos III de Madrid
-% 2023/10/02
+% 2023/10/02 v0.1 - pre release
 % 
 % The code is based on:
-% The repository "A collection of Efficient Global Optimization (EGO)
-% algorithms by Dawei Zhan
-%(https://github.com/zhandawei/Efficient_Global_Optimization_Algorithms)
-% The dace Toolbox by Hans Bruun Nielsen, Søren Nymand and 
-% Lophaven Jacob Søndergaard
-%(https://github.com/psbiomech/dace-toolbox-source)
-%% Please cite the works under "References" when using this program
+% - The repository "Single_objective_EGO_algorithms"
+%   algorithms by Qi Zhang
+%   (https://github.com/109902249/Single_objective_EGO_algorithms)
+% - The dace Toolbox by Hans Bruun Nielsen, Søren Nymand and 
+%   Lophaven Jacob Søndergaard
+%   (https://github.com/psbiomech/dace-toolbox-source)
 %
 %% Changelog
 % Reserved
 %% References
+%% Please cite the works under "References" when using this program
 %  [1] G. Dessena, D. I. Ignatyev, J. F. Whidborne, L. Zanotti Fragonara, A
 %      global-local meta-modelling technique for model updating,
 %      Computer Methods in Applied Mechanics and Engineering, Vol. 
-%      (2023). 
-%      (DOI: -)
-%  [2] A. J. Mayo, A. C. Antoulas, A Kriging Approach to Model Updating for 
-%      Damage Detection, EWSHM 2022, pp. 245-255 (2023). 
-%      (DOI: 10.1007/978-3-031-07258-1_26)
+%      (2023). (DOI: -)
+%  [2] G. Dessena, D. I. Ignatyev, J. F. Whidborne, L. Zanotti Fragonara, 
+%      A Kriging Approach to Model Updating for Damage Detection, LNCE 254,
+%      EWSHM 2022, pp. 245-255 (2023). (DOI: 10.1007/978-3-031-07258-1_26)
 %  [3] G. Dessena, rEGO - A tutorial for the refined Efficient Optimisation 
 %      algorithm, Git Hub,(2023).
 %      (DOI: )
+%% Please cite the works under "References" when using this program
 %--------------------------------------------------------------------------
 
 if ~exist('eps1','var')
@@ -108,7 +124,6 @@ results.initial = [sample_x sample_y];
 f_min = zeros(max_evaluation - num_initial + 1,1);
 % the current best solution
 f_min(1) = min(sample_y);
-results.min_y(1)=f_min(1);
 % the current iteration and evaluation
 evaluation = size(sample_x,1);
 % init stopping flags
@@ -125,9 +140,9 @@ if p_flag == 1
 end
 %--------------------------------------------------------------------------
 % record progresses
-[f_min(iteration+1),ijk] = min(sample_y);
+[~,ijk] = min(sample_y);
 results.min_x(iteration+1,:) = sample_x(ijk,:);
-results.min_y(iteration+1)=f_min(end);
+results.min_y(iteration+1)= min(sample_y);
 %--------------------------------------------------------------------------
 % the iteration procedure
 %initialise iteration flags
@@ -147,16 +162,15 @@ while stopping >  0 % verify convergence not reached
                 results.x = sample_x;
                 results.y = sample_y;
                 results.evaluation = evaluation;
-                [fval,id] = min(sample_y);
-                x = sample_x(id,:);
+                [~,ijk] = min(sample_y);
+                results.min_x(end+1,:) = sample_x(ijk,:);
+                results.min_y(end+1)= min(sample_y);
                 results.fval=fval;
                 results.iteration = iteration;
                 results.EI = EI;
                 results.flag = 0;
                 results.refinement = refinement;
                 results.stall = 0;
-                [results.min_y(end+1),ijk] = min(sample_y);
-                results.min_x(end+1,:) = sample_x(ijk,:);
                 stopping = 0;
             end
         else
@@ -197,9 +211,7 @@ while stopping >  0 % verify convergence not reached
     % add the new point to design set
     sample_x = [sample_x;best_x];
     sample_y = [sample_y;best_y];
-    [f_min(iteration+1),ijk] = min(sample_y);
-    results.min_x(iteration+1,:) = sample_x(ijk,:);
-    results.min_y(iteration+1)=f_min(end);
+    f_min(iteration+1) = min(sample_y);
     if p_flag == 1
         % plot the iteration history
         plot(0:iteration,f_min(1:iteration+1),'r-o');title(sprintf('iteration: %d, evaluations:%d',iteration,evaluation));drawnow;
@@ -252,7 +264,7 @@ while stopping >  0 % verify convergence not reached
             results.flag = 0;
             results.refinement = refinement;
             results.stall = 0;
-            [results.min_y(end+1),ijk] = min(sample_y);
+            [results.min_y(end+1),ijk]=min(sample_y);
             results.min_x(end+1,:) = sample_x(ijk,:);
             stopping = 0;
         elseif length(sample_y) > num_initial-1 % search space refinement
@@ -282,6 +294,9 @@ while stopping >  0 % verify convergence not reached
             sample_x=[sample_x;minx];
         end
     end
+    % record progresses
+    [results.min_y(iteration+1),ijk] = min(sample_y);
+    results.min_x(iteration+1,:) = sample_x(ijk,:);
     if meno == min(sample_y)
         count_m = 1 +  count_m;
         disp("Stall iterations "+string(count_m))
