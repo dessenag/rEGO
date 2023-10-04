@@ -81,7 +81,7 @@ function [x,fval,results] = rEGO(fun_name,num_vari,lwb,upb,eps1,eps2,printing)
 % Lecture Notes in Civil Engineering. Springer International Publishing, 
 % pp. 245–255, Jun. 16, 2022. doi: 10.1007/978-3-031-07258-1_26.
 % [3] G. Dessena, rEGO – A tutorial on the refined Efficient Global 
-% Optimisation, GitHub, Oct. 4, 2023. doi: 10.5281/zenodo.8406031
+% Optimisation, GitHub, Oct. 4, 2023. doi: 10.5281/zenodo.8406030
 
 %% Please cite the works under "References" when using this program
 %--------------------------------------------------------------------------

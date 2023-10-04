@@ -102,7 +102,7 @@ eps1 = 10^(-3); eps2 = 10^(-4); % stopping criterion
 % Jun. 16, 2022. (DOI: <https://doi.org/10.1007/978-3-031-07258-1_26 10.1007/978-3-031-07258-1_26>).
 % 
 % [3] G. Dessena, rEGO – A tutorial on the refined Efficient Global Optimisation, 
-% GitHub, Oct. 4, 2023. (DOI: <https://doi.org/10.5281/zenodo.8406031 10.5281/zenodo.8406031>)
+% GitHub, Oct. 4, 2023. (DOI: <https://doi.org/10.5281/zenodo.8406030 10.5281/zenodo.8406030>)
 % 
 % [4] A. Forrester, A. Sobester, A. Keane, A., Engineering design via surrogate 
 % modelling: a practical guide. Wiley. (DOI: <https://doi.org/10.1002/9780470770801 
