@@ -92,17 +92,17 @@ eps1 = 10^(-3); eps2 = 10^(-4); % stopping criterion
 
 [x,fval,results] = rEGO(fun,num_vari,lwb,upb,eps1,eps2)
 % References
-% [1] G. Dessena, D. I. Ignatyev, J. F. Whidborne, L. Zanotti Fragonara, A global-local 
-% meta-modelling technique for model updating, Computer Methods in Applied Mechanics 
-% and Engineering, Vol. (2023). (DOI: -)
+% [1] G. Dessena, D. I. Ignatyev, J. F. Whidborne, and L. Zanotti Fragonara, 
+% ‘A global-local meta-modelling technique for model updating’, [Accepted] Computer 
+% Methods in Applied Mechanics and Engineering, 2023.
 % 
-% [2] G. Dessena, D. I. Ignatyev, J. F. Whidborne, L. Zanotti Fragonara, A Kriging 
-% Approach to Model Updating for Damage Detection, in European Workshop of Structural 
-% Health Monitoring 2022, LNCE volume 254, EWSHM 2022, pp. 245–255 (2023). (DOI: 
-% <https://doi.org/10.1007/978-3-031-07258-1_26 10.1007/978-3-031-07258-1_26>)
+% [2] G. Dessena, D. I. Ignatyev, J. F. Whidborne, and L. Zanotti Fragonara, 
+% ‘A Kriging Approach to Model Updating for Damage Detection’, EWSHM 2022, Lecture 
+% Notes in Civil Engineering. Springer International Publishing, pp. 245–255, 
+% Jun. 16, 2022. (DOI: <https://doi.org/10.1007/978-3-031-07258-1_26 10.1007/978-3-031-07258-1_26>).
 % 
-% [3] G. Dessena, rEGO - A tutorial on the refined Efficient Global Optimisation, 
-% GitHub (2023) (DOI: -)
+% [3] G. Dessena, rEGO – A tutorial on the refined Efficient Global Optimisation, 
+% GitHub, Oct. 4, 2023. (DOI: <https://doi.org/10.5281/zenodo.8406031 10.5281/zenodo.8406031>)
 % 
 % [4] A. Forrester, A. Sobester, A. Keane, A., Engineering design via surrogate 
 % modelling: a practical guide. Wiley. (DOI: <https://doi.org/10.1002/9780470770801 

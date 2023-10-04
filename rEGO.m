@@ -73,16 +73,16 @@ function [x,fval,results] = rEGO(fun_name,num_vari,lwb,upb,eps1,eps2,printing)
 % Reserved
 %% References
 %% Please cite the works under "References" when using this program
-%  [1] G. Dessena, D. I. Ignatyev, J. F. Whidborne, L. Zanotti Fragonara, A
-%      global-local meta-modelling technique for model updating,
-%      Computer Methods in Applied Mechanics and Engineering, Vol. 
-%      (2023). (DOI: -)
-%  [2] G. Dessena, D. I. Ignatyev, J. F. Whidborne, L. Zanotti Fragonara, 
-%      A Kriging Approach to Model Updating for Damage Detection, LNCE 254,
-%      EWSHM 2022, pp. 245-255 (2023). (DOI: 10.1007/978-3-031-07258-1_26)
-%  [3] G. Dessena, rEGO - A tutorial for the refined Efficient Optimisation 
-%      algorithm, Git Hub,(2023).
-%      (DOI: )
+% [1] G. Dessena, D. I. Ignatyev, J. F. Whidborne, and L. Zanotti Fragonara, 
+% 'A global-local meta-modelling technique for model updating', [Accepted] 
+% Computer Methods in Applied Mechanics and Engineering, 2023.
+% [2] G. Dessena, D. I. Ignatyev, J. F. Whidborne, and L. Zanotti Fragonara, 
+% 'A Kriging Approach to Model Updating for Damage Detection’, EWSHM 2022, 
+% Lecture Notes in Civil Engineering. Springer International Publishing, 
+% pp. 245–255, Jun. 16, 2022. doi: 10.1007/978-3-031-07258-1_26.
+% [3] G. Dessena, rEGO – A tutorial on the refined Efficient Global 
+% Optimisation, GitHub, Oct. 4, 2023. doi: 10.5281/zenodo.8406031
+
 %% Please cite the works under "References" when using this program
 %--------------------------------------------------------------------------
 

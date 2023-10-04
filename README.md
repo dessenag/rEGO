@@ -13,7 +13,7 @@ When using this code for your work or research please cite the following:
 3.	G. Dessena, rEGO – A tutorial on the refined Efficient Global Optimisation, GitHub, Oct. 4, 2023. doi: [10.5281/zenodo.8406031](https://doi.org/10.5281/zenodo.8406031)
 
 
-The rEGO is a refined version of the well-known EGO and allows for a better use of computational power for single-objective problems.
+The rEGO is a refined version of the well-known EGO and allows for a better use of computational power for single-objective problems. The repository contains also the model, built in [1] for the three-storey structure of the EI at LANL. 
 The rEGO workflow is a novelty and the code is built over two existing platforms which are forked under [Utilities](/Utilities):
 
 - DACE Toolbox, Hans Bruun Nielsen, Søren Nymand and Lophaven Jacob Søndergaard - https://github.com/psbiomech/dace-toolbox-source
@@ -27,4 +27,4 @@ The rEGO workflow is a novelty and the code is built over two existing platforms
 
 ## Repository Citation
 
-*** insert proper citation ***
+G. Dessena, rEGO – A tutorial on the refined Efficient Global Optimisation, GitHub, Oct. 4, 2023. doi: [10.5281/zenodo.8406031](https://doi.org/10.5281/zenodo.8406031)
