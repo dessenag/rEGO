@@ -1,6 +1,6 @@
-# rEGO
+# rEGO [![DOI](https://zenodo.org/badge/699360255.svg)](https://zenodo.org/badge/latestdoi/699360255)
 A [tutorial](/Tutorial) for the refined Efficient Optimisation algorithm
-[![DOI](https://zenodo.org/badge/699360255.svg)](https://zenodo.org/badge/latestdoi/699360255)
+
 
 This repo contains the code for the article:
 
