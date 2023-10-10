@@ -8,7 +8,7 @@ G. Dessena, D. I. Ignatyev, J. F. Whidborne, and L. Zanotti Fragonara, ‘A glob
 
 When using this code for your work or research please cite the following:
 
-1.	G. Dessena, D. I. Ignatyev, J. F. Whidborne, and L. Zanotti Fragonara, ‘A global–local meta-modelling technique for model updating’, Computer Methods in Applied Mechanics and Engineering, vol. 418. Elsevier BV, p. 116511, Jan. 2024. doi: 10.1016/j.cma.2023.116511.
+1.	G. Dessena, D. I. Ignatyev, J. F. Whidborne, and L. Zanotti Fragonara, ‘A global–local meta-modelling technique for model updating’, Computer Methods in Applied Mechanics and Engineering, vol. 418. Elsevier BV, p. 116511, Jan. 2024. doi: [10.1016/j.cma.2023.116511](https://doi.org/10.1016/j.cma.2023.116511).
 2.	G. Dessena, D. I. Ignatyev, J. F. Whidborne, and L. Zanotti Fragonara, ‘A Kriging Approach to Model Updating for Damage Detection’, EWSHM 2022, Lecture Notes in Civil Engineering. Springer International Publishing, pp. 245–255, Jun. 16, 2022. doi: [10.1007/978-3-031-07258-1_26](https://doi.org/10.1007/978-3-031-07258-1_26).
 3.	G. Dessena, rEGO – A tutorial on the refined Efficient Global Optimisation, GitHub, Oct. 10, 2023. doi: [10.5281/zenodo.8406030](https://doi.org/10.5281/zenodo.8406030)
 
