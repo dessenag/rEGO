@@ -93,8 +93,9 @@ eps1 = 10^(-3); eps2 = 10^(-4); % stopping criterion
 [x,fval,results] = rEGO(fun,num_vari,lwb,upb,eps1,eps2)
 % References
 % [1] G. Dessena, D. I. Ignatyev, J. F. Whidborne, and L. Zanotti Fragonara, 
-% ‘A global-local meta-modelling technique for model updating’, [Accepted] Computer 
-% Methods in Applied Mechanics and Engineering, 2023.
+% ‘A global–local meta-modelling technique for model updating’, Computer Methods 
+% in Applied Mechanics and Engineering, vol. 418. Elsevier BV, p. 116511, Jan. 
+% 2024. (DOI: <https://doi.org/10.1016/j.cma.2023.116511 10.1016/j.cma.2023.116511>).
 % 
 % [2] G. Dessena, D. I. Ignatyev, J. F. Whidborne, and L. Zanotti Fragonara, 
 % ‘A Kriging Approach to Model Updating for Damage Detection’, EWSHM 2022, Lecture 
@@ -102,7 +103,7 @@ eps1 = 10^(-3); eps2 = 10^(-4); % stopping criterion
 % Jun. 16, 2022. (DOI: <https://doi.org/10.1007/978-3-031-07258-1_26 10.1007/978-3-031-07258-1_26>).
 % 
 % [3] G. Dessena, rEGO – A tutorial on the refined Efficient Global Optimisation, 
-% GitHub, Oct. 4, 2023. (DOI: <https://doi.org/10.5281/zenodo.8406030 10.5281/zenodo.8406030>)
+% Zenodo, Oct. 10, 2023. (DOI: <https://doi.org/10.5281/zenodo.8406030 10.5281/zenodo.8406030>)
 % 
 % [4] A. Forrester, A. Sobester, A. Keane, A., Engineering design via surrogate 
 % modelling: a practical guide. Wiley. (DOI: <https://doi.org/10.1002/9780470770801 
